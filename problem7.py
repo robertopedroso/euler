@@ -1,5 +1,5 @@
 from itertools import count
-from math import sqrt, floor
+from math import sqrt
 from util import nth
 
 def isprime(n):
