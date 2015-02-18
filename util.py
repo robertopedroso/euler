@@ -37,3 +37,8 @@ def nth(iterable, n, default=None):
     From itertools recipes: https://docs.python.org/2/library/itertools.html
     """
     return next(itertools.islice(iterable, n, None), default)
+
+def sumdigits(n):
+    """Returns the sum of the digits of n"""
+    digits = [int(x) for x in str(n)]
+    return reduce(lambda x, y: x + y, digits)
