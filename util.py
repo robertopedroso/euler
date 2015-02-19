@@ -38,7 +38,19 @@ def nth(iterable, n, default=None):
     """
     return next(itertools.islice(iterable, n, None), default)
 
+def numdigits(n):
+    """Returns the number of digits in n"""
+    return len(str(n))
+
 def sumdigits(n):
     """Returns the sum of the digits of n"""
     digits = [int(x) for x in str(n)]
     return reduce(lambda x, y: x + y, digits)
+
+def firstndigits(p, n):
+    """Returns the last n digits of p"""
+    return p / 10**(numdigits(p) - n)
+
+def lastndigits(n, p):
+    """Returns the last n digits of p"""
+    return p % 10**n
