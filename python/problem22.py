@@ -9,7 +9,7 @@ def alphascore(word):
 if __name__ == "__main__":
     # safely load script without caring about CWD
     script_dir = os.path.dirname(__file__)
-    data_path = "data/problem22.txt"
+    data_path = "../data/problem22.txt"
     fpath = os.path.join(script_dir, data_path)
 
     # read list of names, split by comma, remove parens, and sort alphabetically

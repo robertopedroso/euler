@@ -16,7 +16,7 @@ def sumrow(tri, n):
 if __name__ == "__main__":
     # safely load script without caring about CWD
     script_dir = os.path.dirname(__file__)
-    data_path = "data/problem18.txt"
+    data_path = "../data/problem67.txt"
     fpath = os.path.join(script_dir, data_path)
 
     tri = read_triangle_from_file(fpath)
