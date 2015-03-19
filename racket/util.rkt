@@ -2,6 +2,7 @@
 
 (provide sum)
 (provide define-memoized)
+(provide divides?)
 
 ; sum a list of numbers
 (define (sum lst)
@@ -22,3 +23,7 @@
                 (hash-set! results vals (begin bodies ...)))
               (hash-ref results vals))
             args ...))))]))
+
+; returns whether a is divisible by b
+(define (divides? a b)
+  (zero? (remainder a b)))
