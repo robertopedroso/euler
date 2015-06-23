@@ -2,6 +2,8 @@
 
 (provide sum)
 (provide define-memoized)
+(provide divides?)
+(provide digits)
 
 ; sum a list of numbers
 (define (sum lst)
@@ -22,3 +24,15 @@
                 (hash-set! results vals (begin bodies ...)))
               (hash-ref results vals))
             args ...))))]))
+
+; returns whether a is divisible by b
+(define (divides? a b)
+  (zero? (remainder a b)))
+
+; returns the digits of n
+(define (digits n)
+  (let collect ([n n] [lst '()])
+    (cond
+      [(< n 10) (cons n lst)]
+      [else (collect (quotient n 10)
+                     (cons (remainder n 10) lst))])))
