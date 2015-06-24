@@ -6,3 +6,4 @@ clean:
 	rm -f problem-3
 	rm -f problem-4
 	rm -f problem-5
+	rm -f problem-6
